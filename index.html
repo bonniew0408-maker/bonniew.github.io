@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bonnie · 高级产品经理</title>
   <meta name="description" content="9年C端与AIGC产品经验，驱动美国市场转化率增长162%。现寻找AI产品方向新机会。" />
-  <meta property="og:title" content="Bonnie · 高级产品经理" />
-  <meta property="og:description" content="把技术变成用户愿意付费的产品" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,7 +39,6 @@
 
     .site {
       background: var(--bg);
-      color: var(--ink);
       width: 100%;
       max-width: 820px;
       border: 2.5px solid var(--ink);
@@ -49,419 +46,207 @@
       border-radius: 4px;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between;
       padding: 13px 28px;
       border-bottom: 2.5px solid var(--ink);
       background: var(--yellow);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
     }
     .nav-logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--ink);
-      cursor: pointer;
-      text-decoration: none;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px;
+      color: var(--ink); cursor: pointer; text-decoration: none;
     }
     .nav-links { display: flex; gap: 24px; }
     .nav-link {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--ink);
-      opacity: .55;
-      cursor: pointer;
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 2px;
+      font-size: 13px; font-weight: 500; color: var(--ink); opacity: .55;
+      cursor: pointer; text-decoration: none;
+      border-bottom: 2px solid transparent; padding-bottom: 2px;
       transition: opacity .15s, border-color .15s;
     }
     .nav-link:hover { opacity: 1; border-bottom-color: var(--ink); }
     .nav-cta {
-      background: var(--ink);
-      color: var(--yellow);
-      border: none;
-      border-radius: 7px;
-      padding: 8px 18px;
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      transition: opacity .15s;
-      text-decoration: none;
+      background: var(--ink); color: var(--yellow); border: none; border-radius: 7px;
+      padding: 8px 18px; font-size: 13px; font-weight: 500; cursor: pointer;
+      font-family: 'DM Sans', sans-serif; transition: opacity .15s; text-decoration: none;
     }
     .nav-cta:hover { opacity: .8; }
 
-    /* ── HERO ── */
-    .hero {
-      background: var(--purple);
-      border-bottom: 2.5px solid var(--ink);
-    }
+    /* HERO */
+    .hero { background: var(--purple); border-bottom: 2.5px solid var(--ink); }
     .hero-topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 28px;
-      border-bottom: 1.5px solid rgba(255,255,255,.12);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 28px; border-bottom: 1.5px solid rgba(255,255,255,.12);
     }
     .hero-status {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      font-weight: 500;
-      color: rgba(255,255,255,.55);
+      display: flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 500; color: rgba(255,255,255,.55);
     }
     .hero-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--yellow);
-      animation: pulse 2s infinite;
-      flex-shrink: 0;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--yellow); animation: pulse 2s infinite; flex-shrink: 0;
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: .35; }
-    }
-    .hero-role {
-      font-size: 12px;
-      color: rgba(255,255,255,.28);
-      font-weight: 500;
-    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
+    .hero-role { font-size: 12px; color: rgba(255,255,255,.28); font-weight: 500; }
 
     .hero-body { padding: 32px 28px 26px; }
-
     .hero-h1 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 46px;
-      line-height: 1.05;
-      letter-spacing: -1.2px;
-      color: #fff;
-      margin-bottom: 24px;
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 46px; line-height: 1.05; letter-spacing: -1.2px;
+      color: #fff; margin-bottom: 24px;
     }
     .hero-h1 em {
-      font-style: normal;
-      background: var(--yellow);
-      color: var(--ink);
-      padding: 2px 10px;
-      border-radius: 6px;
-      display: inline-block;
-      line-height: 1.2;
+      font-style: normal; background: var(--yellow); color: var(--ink);
+      padding: 2px 10px; border-radius: 6px; display: inline-block; line-height: 1.2;
     }
 
+    /* 胶囊：只有 .active 有黄色，CSS 无任何 :hover 颜色规则 */
     .hero-tags { display: flex; gap: 10px; flex-wrap: wrap; }
     .hero-tag {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px;
       color: #fff;
       background: rgba(255,255,255,.13);
       border: 1.5px solid rgba(255,255,255,.28);
-      padding: 8px 18px;
-      border-radius: 999px;
-      cursor: default;
+      padding: 8px 18px; border-radius: 999px;
+      cursor: default; user-select: none;
       transition: background .18s, color .18s, border-color .18s, transform .15s;
-      user-select: none;
     }
-    .hero-tag.active,
-    .hero-tag:hover {
-      background: var(--yellow);
-      color: var(--ink);
-      border-color: var(--yellow);
-      transform: translateY(-2px);
+    .hero-tag.active {
+      background: var(--yellow); color: var(--ink);
+      border-color: var(--yellow); transform: translateY(-2px);
     }
 
-    /* metrics */
+    /* METRICS */
     .metrics {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1.5px solid rgba(255,255,255,.15);
-      margin-top: 28px;
+      display: grid; grid-template-columns: repeat(3,1fr);
+      border-top: 1.5px solid rgba(255,255,255,.15); margin-top: 28px;
     }
-    .metric {
-      padding: 22px 24px;
-      border-right: 1.5px solid rgba(255,255,255,.12);
-    }
+    .metric { padding: 22px 24px; border-right: 1.5px solid rgba(255,255,255,.12); }
     .metric:last-child { border-right: none; }
     .metric-val {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 30px;
-      color: var(--yellow);
-      line-height: 1;
-      margin-bottom: 5px;
-      letter-spacing: -1px;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 30px;
+      color: var(--yellow); line-height: 1; margin-bottom: 5px; letter-spacing: -1px;
     }
-    .metric-label {
-      font-size: 12px;
-      color: rgba(255,255,255,.5);
-      line-height: 1.55;
-    }
-    .metric-src {
-      display: block;
-      font-size: 10px;
-      color: rgba(255,255,255,.22);
-      margin-top: 4px;
-    }
+    .metric-label { font-size: 12px; color: rgba(255,255,255,.5); line-height: 1.55; }
+    .metric-src { display: block; font-size: 10px; color: rgba(255,255,255,.22); margin-top: 4px; }
 
-    /* cta row */
     .hero-cta-row {
-      padding: 20px 28px;
-      border-top: 1.5px solid rgba(255,255,255,.1);
-      display: flex;
-      align-items: center;
-      gap: 16px;
+      padding: 20px 28px; border-top: 1.5px solid rgba(255,255,255,.1);
+      display: flex; align-items: center; gap: 16px;
     }
     .hero-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--yellow);
-      color: var(--ink);
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      padding: 13px 26px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 3px 3px 0 rgba(0,0,0,.3);
-      transition: transform .15s, box-shadow .15s;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--yellow); color: var(--ink);
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px;
+      padding: 13px 26px; border-radius: 999px; border: none; cursor: pointer;
+      box-shadow: 3px 3px 0 rgba(0,0,0,.3); transition: transform .15s, box-shadow .15s;
     }
-    .hero-cta:hover {
-      transform: translate(-1px, -1px);
-      box-shadow: 4px 4px 0 rgba(0,0,0,.35);
-    }
-    .hero-cta-note {
-      font-size: 12px;
-      color: rgba(255,255,255,.3);
-    }
+    .hero-cta:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 rgba(0,0,0,.35); }
+    .hero-cta-note { font-size: 12px; color: rgba(255,255,255,.3); }
 
-    /* ── PROJECTS ── */
-    .projects {
-      padding: 40px 28px;
-      border-bottom: 2.5px solid var(--ink);
-    }
+    /* PROJECTS */
+    .projects { padding: 40px 28px; border-bottom: 2.5px solid var(--ink); }
     .section-label {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 1.8px;
-      color: var(--muted);
-      text-transform: uppercase;
-      margin-bottom: 20px;
+      display: flex; align-items: center; gap: 12px;
+      font-size: 11px; font-weight: 500; letter-spacing: 1.8px;
+      color: var(--muted); text-transform: uppercase; margin-bottom: 20px;
     }
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #E8E4F0;
-    }
+    .section-label::after { content:''; flex:1; height:1px; background:#E8E4F0; }
 
     .proj {
-      border: 2px solid var(--ink);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 12px;
-      background: #fff;
-      cursor: pointer;
+      border: 2px solid var(--ink); border-radius: 12px; overflow: hidden;
+      margin-bottom: 12px; background: #fff; cursor: pointer;
       transition: transform .15s, box-shadow .15s;
     }
     .proj:last-child { margin-bottom: 0; }
-    .proj:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: 4px 4px 0 var(--purple-mid);
-    }
-    .proj.open {
-      border-color: var(--purple);
-      box-shadow: 4px 4px 0 var(--purple-mid);
-    }
+    .proj:hover { transform: translate(-2px,-2px); box-shadow: 4px 4px 0 var(--purple-mid); }
+    .proj.open { border-color: var(--purple); box-shadow: 4px 4px 0 var(--purple-mid); }
     .proj-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 22px;
+      display: flex; align-items: center; justify-content: space-between; padding: 20px 22px;
     }
     .proj-kicker {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: .8px;
-      color: var(--muted);
-      text-transform: uppercase;
-      margin-bottom: 5px;
+      font-size: 11px; font-weight: 500; letter-spacing: .8px;
+      color: var(--muted); text-transform: uppercase; margin-bottom: 5px;
     }
     .proj-title {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 17px;
-      color: var(--ink);
-      margin-bottom: 5px;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 17px;
+      color: var(--ink); margin-bottom: 5px;
     }
-    .proj-quote {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.6;
-      max-width: 400px;
-    }
-    .proj-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-      margin-left: 16px;
-    }
+    .proj-quote { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 400px; }
+    .proj-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-left: 16px; }
     .proj-badge {
-      background: var(--purple-light);
-      border: 2px solid var(--purple);
-      border-radius: 9px;
-      padding: 10px 14px;
-      text-align: center;
+      background: var(--purple-light); border: 2px solid var(--purple);
+      border-radius: 9px; padding: 10px 14px; text-align: center;
     }
     .proj-badge-val {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 17px;
-      color: var(--purple-dark);
-      line-height: 1;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 17px;
+      color: var(--purple-dark); line-height: 1;
     }
-    .proj-badge-sub {
-      font-size: 10px;
-      color: var(--purple);
-      margin-top: 3px;
-      font-weight: 500;
-    }
+    .proj-badge-sub { font-size: 10px; color: var(--purple); margin-top: 3px; font-weight: 500; }
     .expand-icon {
-      font-size: 12px;
-      color: var(--muted);
-      transition: transform .2s;
-      width: 28px;
-      height: 28px;
-      border: 1.5px solid #E0DAEE;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--purple-light);
-      flex-shrink: 0;
+      font-size: 12px; color: var(--muted); transition: transform .2s;
+      width: 28px; height: 28px; border: 1.5px solid #E0DAEE; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--purple-light); flex-shrink: 0;
     }
     .proj.open .expand-icon {
-      transform: rotate(180deg);
-      background: var(--purple);
-      color: #fff;
-      border-color: var(--purple);
+      transform: rotate(180deg); background: var(--purple); color: #fff; border-color: var(--purple);
     }
     .proj-expand {
-      border-top: 1.5px dashed #E0DAEE;
-      padding: 16px 22px 20px;
-      background: #FAF9FF;
-      font-size: 13px;
-      color: #555;
-      line-height: 1.8;
-      display: none;
+      border-top: 1.5px dashed #E0DAEE; padding: 16px 22px 20px; background: #FAF9FF;
+      font-size: 13px; color: #555; line-height: 1.8; display: none;
     }
     .proj.open .proj-expand { display: block; }
     .proj-expand ul { padding-left: 18px; }
     .proj-expand li { margin-bottom: 5px; }
     .proj-expand li::marker { color: var(--purple); }
 
-    /* ── ABOUT ── */
+    /* ABOUT */
     .about {
-      padding: 40px 28px;
-      border-bottom: 2.5px solid var(--ink);
-      background: var(--purple-light);
+      padding: 40px 28px; border-bottom: 2.5px solid var(--ink); background: var(--purple-light);
     }
     .about-h {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--ink);
-      margin-bottom: 14px;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px;
+      color: var(--ink); margin-bottom: 14px;
     }
-    .about-body {
-      font-size: 14px;
-      color: #444;
-      line-height: 1.85;
-      max-width: 580px;
-    }
+    .about-body { font-size: 14px; color: #444; line-height: 1.85; max-width: 580px; }
     .about-body p { margin-bottom: 10px; }
     .about-body p:last-child { margin-bottom: 0; }
 
-    /* ── CONTACT ── */
+    /* CONTACT */
     .contact {
-      padding: 40px 28px;
-      background: var(--yellow);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 24px;
+      padding: 40px 28px; background: var(--yellow);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 24px;
     }
     .contact-eyebrow {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--ink);
-      opacity: .45;
-      margin-bottom: 7px;
+      font-size: 11px; font-weight: 500; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--ink); opacity: .45; margin-bottom: 7px;
     }
     .contact-h {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 22px;
-      color: var(--ink);
-      line-height: 1.25;
-      margin-bottom: 16px;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 22px;
+      color: var(--ink); line-height: 1.25; margin-bottom: 16px;
     }
     .contact-info {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      font-size: 13px;
-      color: var(--ink);
-      align-items: center;
-      opacity: .65;
+      display: flex; gap: 14px; flex-wrap: wrap;
+      font-size: 13px; color: var(--ink); align-items: center; opacity: .65;
     }
-    .contact-info a {
-      color: var(--purple-dark);
-      text-decoration: none;
-      font-weight: 500;
-      opacity: 1;
-    }
+    .contact-info a { color: var(--purple-dark); text-decoration: none; font-weight: 500; opacity: 1; }
     .contact-info a:hover { text-decoration: underline; }
     .contact-divider { opacity: .3; }
     .dl-btn {
-      background: var(--ink);
-      border: none;
-      border-radius: 9px;
-      padding: 14px 24px;
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--yellow);
-      cursor: pointer;
-      white-space: nowrap;
-      box-shadow: 3px 3px 0 var(--yellow-dark);
-      transition: opacity .15s;
-      text-decoration: none;
+      background: var(--ink); border: none; border-radius: 9px;
+      padding: 14px 24px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px;
+      color: var(--yellow); cursor: pointer; white-space: nowrap;
+      box-shadow: 3px 3px 0 var(--yellow-dark); transition: opacity .15s; text-decoration: none;
     }
     .dl-btn:hover { opacity: .85; }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       body { padding: 0; }
       .site { border-left: none; border-right: none; border-radius: 0; }
       .hero-h1 { font-size: 34px; }
-      .metrics { grid-template-columns: repeat(3, 1fr); }
       .metric { padding: 16px 14px; }
       .metric-val { font-size: 22px; }
       .contact { flex-direction: column; align-items: flex-start; }
@@ -472,18 +257,15 @@
 <body>
   <div class="site" id="top">
 
-    <!-- NAV -->
     <nav class="nav">
-      <a class="nav-logo" onclick="scrollTo('top')">Bonnie</a>
+      <a class="nav-logo" onclick="scrollToId('top')">Bonnie</a>
       <div class="nav-links">
-        <a class="nav-link" onclick="scrollTo('projects')">项目案例</a>
-        <a class="nav-link" onclick="scrollTo('about')">关于我</a>
+        <a class="nav-link" onclick="scrollToId('projects')">项目案例</a>
+        <a class="nav-link" onclick="scrollToId('about')">关于我</a>
       </div>
-      <!-- 将 href 替换为你的简历真实下载链接 -->
       <a class="nav-cta" href="王钰莹_高级产品经理.pdf" download>↓ 下载简历</a>
     </nav>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-topbar">
         <div class="hero-status">
@@ -494,9 +276,7 @@
       </div>
 
       <div class="hero-body">
-        <h1 class="hero-h1">
-          把技术变成<br><em>用户愿意付费的产品</em>
-        </h1>
+        <h1 class="hero-h1">把技术变成<br><em>用户愿意付费的产品</em></h1>
         <div class="hero-tags" id="tags">
           <span class="hero-tag active">9年产品经验</span>
           <span class="hero-tag">C端 &amp; AIGC</span>
@@ -524,12 +304,11 @@
       </div>
 
       <div class="hero-cta-row">
-        <button class="hero-cta" onclick="scrollTo('projects')">看看我怎么做到的 ↓</button>
+        <button class="hero-cta" onclick="scrollToId('projects')">看看我怎么做到的 ↓</button>
         <span class="hero-cta-note">点击项目卡片可展开详情</span>
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section class="projects" id="projects">
       <div class="section-label">项目案例</div>
 
@@ -541,22 +320,17 @@
             <div class="proj-quote">从立项到上线，Google核心词排名第3，美国市场转化率增长162%。</div>
           </div>
           <div class="proj-right">
-            <div class="proj-badge">
-              <div class="proj-badge-val">No.3</div>
-              <div class="proj-badge-sub">Google排名</div>
-            </div>
+            <div class="proj-badge"><div class="proj-badge-val">No.3</div><div class="proj-badge-sub">Google排名</div></div>
             <div class="expand-icon">▾</div>
           </div>
         </div>
-        <div class="proj-expand">
-          <ul>
-            <li>独立负责音频产品线0-1建设，通过SEMrush/SimilarWeb完成市场调研与竞品分析</li>
-            <li>主导ASR、TTS核心算法模型技术选型</li>
-            <li>设计Freemium商业模式 + 小语种本地化定价，持续优化付费漏斗</li>
-            <li>推动SEO与社媒团队构建「内容引流—产品转化」增长闭环</li>
-            <li>自然搜索流量占比提升至95%，月均社媒自然渠道新增用户40,000+</li>
-          </ul>
-        </div>
+        <div class="proj-expand"><ul>
+          <li>独立负责音频产品线0-1建设，通过SEMrush/SimilarWeb完成市场调研与竞品分析</li>
+          <li>主导ASR、TTS核心算法模型技术选型</li>
+          <li>设计Freemium商业模式 + 小语种本地化定价，持续优化付费漏斗</li>
+          <li>推动SEO与社媒团队构建「内容引流—产品转化」增长闭环</li>
+          <li>自然搜索流量占比提升至95%，月均社媒自然渠道新增用户40,000+</li>
+        </ul></div>
       </div>
 
       <div class="proj" onclick="this.classList.toggle('open')">
@@ -567,20 +341,15 @@
             <div class="proj-quote">0-1搭建用户分层系统，转化率超越基础内购渠道150%。</div>
           </div>
           <div class="proj-right">
-            <div class="proj-badge">
-              <div class="proj-badge-val">+150%</div>
-              <div class="proj-badge-sub">超越基础渠道</div>
-            </div>
+            <div class="proj-badge"><div class="proj-badge-val">+150%</div><div class="proj-badge-sub">超越基础渠道</div></div>
             <div class="expand-icon">▾</div>
           </div>
         </div>
-        <div class="proj-expand">
-          <ul>
-            <li>从0-1主导设计智能运营平台，集成用户标签、分层分群及自动化触达能力</li>
-            <li>参与中台系统架构设计，独立完成用户系统与智能运营系统PRD撰写</li>
-            <li>系统上线1年内，为公司明星产品创造额外月均营收 $10,000+（约 ¥80,000+）</li>
-          </ul>
-        </div>
+        <div class="proj-expand"><ul>
+          <li>从0-1主导设计智能运营平台，集成用户标签、分层分群及自动化触达能力</li>
+          <li>参与中台系统架构设计，独立完成用户系统与智能运营系统PRD撰写</li>
+          <li>系统上线1年内，为公司明星产品创造额外月均营收 $10,000+（约 ¥80,000+）</li>
+        </ul></div>
       </div>
 
       <div class="proj" onclick="this.classList.toggle('open')">
@@ -591,24 +360,18 @@
             <div class="proj-quote">人声分离上线1个月，活跃用户+50%，内购转化率+45%。</div>
           </div>
           <div class="proj-right">
-            <div class="proj-badge">
-              <div class="proj-badge-val">+50%</div>
-              <div class="proj-badge-sub">活跃用户增长</div>
-            </div>
+            <div class="proj-badge"><div class="proj-badge-val">+50%</div><div class="proj-badge-sub">活跃用户增长</div></div>
             <div class="expand-icon">▾</div>
           </div>
         </div>
-        <div class="proj-expand">
-          <ul>
-            <li>负责产品1-10阶段增长策略，深度调研目标用户画像与高频使用场景</li>
-            <li>每日跟踪用户行为转化率与内购转化率，通过A/B测试持续优化付费漏斗</li>
-            <li>主导设计「人声分离」功能，上线1个月功能使用率提升至35%</li>
-          </ul>
-        </div>
+        <div class="proj-expand"><ul>
+          <li>负责产品1-10阶段增长策略，深度调研目标用户画像与高频使用场景</li>
+          <li>每日跟踪用户行为转化率与内购转化率，通过A/B测试持续优化付费漏斗</li>
+          <li>主导设计「人声分离」功能，上线1个月功能使用率提升至35%</li>
+        </ul></div>
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="about" id="about">
       <div class="section-label">关于我</div>
       <div class="about-h">Bonnie · 高级产品经理</div>
@@ -618,36 +381,46 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section class="contact">
       <div>
         <div class="contact-eyebrow">Currently Open to Work</div>
         <div class="contact-h">我正在寻找<br>AI 产品方向的新机会</div>
         <div class="contact-info">
-          <a href="/cdn-cgi/l/email-protection#04666b6a6a6d6161615b73443532372a676b69"><span class="__cf_email__" data-cfemail="dfbdb0b1b1b6bababa80a89feee9ecf1bcb0b2">[email&#160;protected]</span></a>
+          <span>bonnieee_w@163.com</span>
           <span class="contact-divider">·</span>
           <span>18333611149（同微信）</span>
         </div>
       </div>
-      <!-- 将 href 替换为你的简历真实下载链接 -->
       <a class="dl-btn" href="王钰莹_高级产品经理.pdf" download>↓ 下载简历</a>
     </section>
 
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // 平滑滚动
-    function scrollTo(id) {
-      const el = document.getElementById(id);
+  <script>
+    function scrollToId(id) {
+      var el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // 胶囊 hover 逻辑
-    const tagsEl = document.getElementById('tags');
-    const tags   = tagsEl.querySelectorAll('.hero-tag');
-    const first  = tags[0];
+    /* 胶囊 hover：颜色完全由 JS 控制，CSS 无任何 :hover 颜色规则
+       - mouseenter 某个 tag → 只它高亮，其余恢复默认
+       - mouseleave 整个容器 → 恢复第一个高亮                    */
+    (function () {
+      var container = document.getElementById('tags');
+      var tags = Array.prototype.slice.call(container.querySelectorAll('.hero-tag'));
+      var first = tags[0];
 
-    tagsEl.addEventListener('mouseover', e => {
-      const t = e.target.closest('.hero-tag');
-      if (!t) return;
-      tags.forEach(tag => tag.classList.re
+      function activate(tag) {
+        tags.forEach(function (t) { t.classList.remove('active'); });
+        tag.classList.add('active');
+      }
+
+      tags.forEach(function (tag) {
+        tag.addEventListener('mouseenter', function () { activate(tag); });
+      });
+
+      container.addEventListener('mouseleave', function () { activate(first); });
+    }());
+  </script>
+</body>
+</html>
